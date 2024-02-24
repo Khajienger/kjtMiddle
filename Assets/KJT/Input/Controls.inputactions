@@ -1,14 +1,32 @@
 {
-    "name": "New Controls",
+    "name": "Controls",
     "maps": [
         {
-            "name": "New action map",
-            "id": "cfe738ca-a4e5-43dd-862a-c0ab73ad8563",
+            "name": "ControlsMap",
+            "id": "360b3c08-e2b8-49a3-8a73-f83debf94068",
             "actions": [
                 {
-                    "name": "Action 1",
+                    "name": "MoveAction",
+                    "type": "Value",
+                    "id": "f268ab6a-4a29-4ac5-bb91-aad86ad01a8d",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "ShotAction",
                     "type": "Button",
-                    "id": "436ca830-f1bf-4395-8372-fbb667eba3de",
+                    "id": "ba1186de-b5d7-4025-8a22-4d8529f0f4df",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ThrowAction",
+                    "type": "Button",
+                    "id": "2dd721b1-d1b8-415b-b308-bb63e4854882",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -18,12 +36,34 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "f3fc1c9b-d2e9-4804-828a-49f3d06d3aaf",
-                    "path": "*/{PrimaryAction}",
+                    "id": "82915f11-425c-426e-8bd6-b9c046d26809",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Action 1",
+                    "action": "MoveAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b2001568-d755-41a1-b062-c5e2b602d785",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShotAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b0354c11-7ca2-419f-a032-cb73d6e5a8e9",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ThrowAction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

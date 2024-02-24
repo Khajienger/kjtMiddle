@@ -66,13 +66,14 @@
     <Compile Include="Assets\KJT\Scripts\UserInput\UserInputSystem.cs" />
     <Compile Include="Assets\KJT\Scripts\DogKnight\DogMover.cs" />
     <Compile Include="Assets\KJT\Scripts\Interfaces\Interfaces.cs" />
+    <Compile Include="Assets\KJT\Scripts\UserInput\GlobalStringKeys.cs" />
     <Compile Include="Assets\KJT\Scripts\Character\ThrowAbility.cs" />
     <Compile Include="Assets\KJT\Scripts\UserInput\UserInputData.cs" />
     <Compile Include="Assets\KJT\Scripts\Character\CharacterThrowSystem.cs" />
     <Compile Include="Assets\KJT\Scripts\Character\ShotAbility.cs" />
     <Compile Include="Assets\KJT\Scripts\Character\CharacterMoveSystem.cs" />
     <Compile Include="Assets\KJT\Scripts\DogKnight\DogMoverSystem.cs" />
-    <Compile Include="Assets\KJT\Scripts\UserInput\GlobalStringKeys.cs" />
+    <Compile Include="Assets\KJT\Input\Controls.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

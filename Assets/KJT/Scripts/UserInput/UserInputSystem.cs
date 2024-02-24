@@ -7,6 +7,8 @@ namespace kjtMiddle
 {
     public class UserInputSystem : ComponentSystem
     {
+        private Controls controls;
+
         private EntityQuery inputQuery;
 
         private InputAction moveAction;
@@ -20,50 +22,55 @@ namespace kjtMiddle
         protected override void OnCreate()
         {
             base.OnCreate();
+
+            controls = new Controls();
+
             inputQuery = GetEntityQuery(ComponentType.ReadOnly<InputData>());
         }
 
         protected override void OnStartRunning()
         {
             #region MoveInput...
+            
+            moveAction = controls.
 
-            moveAction = new InputAction(name: "move", binding: GlobalStringKeys.gamepadJoystick);
+            //moveAction = new InputAction(name: "move", binding: GlobalStringKeys.gamepadJoystick);
 
-            moveAction.AddCompositeBinding(GlobalStringKeys.Dpad)
-                .With(name: "Up", binding: GlobalStringKeys.keyW)
-                .With(name: "Down", binding: GlobalStringKeys.keyS)
-                .With(name: "Left", binding: GlobalStringKeys.keyA)
-                .With(name: "Right", binding: GlobalStringKeys.keyD);
+            //moveAction.AddCompositeBinding(GlobalStringKeys.Dpad)
+            //    .With(name: "Up", binding: GlobalStringKeys.keyW)
+            //    .With(name: "Down", binding: GlobalStringKeys.keyS)
+            //    .With(name: "Left", binding: GlobalStringKeys.keyA)
+            //    .With(name: "Right", binding: GlobalStringKeys.keyD);
 
-            moveAction.started += context => { moveInput = context.ReadValue<Vector2>(); };
-            moveAction.performed += context => { moveInput = context.ReadValue<Vector2>(); };
-            moveAction.canceled += context => { moveInput = context.ReadValue<Vector2>(); };
+            //moveAction.started += context => { moveInput = context.ReadValue<Vector2>(); };
+            //moveAction.performed += context => { moveInput = context.ReadValue<Vector2>(); };
+            //moveAction.canceled += context => { moveInput = context.ReadValue<Vector2>(); };
 
-            moveAction.Enable();
+            //moveAction.Enable();
 
             #endregion
 
             #region ShotInput...
 
-            shotAction = new InputAction(name: "shot", binding: GlobalStringKeys.keyLCtrl);
+            //shotAction = new InputAction(name: "shot", binding: GlobalStringKeys.keyLCtrl);
 
-            shotAction.started += context => { shotInput = 0; };
-            shotAction.performed += context => { shotInput = context.ReadValue<float>(); };
-            shotAction.canceled += context => { shotInput = context.ReadValue<float>(); };
+            //shotAction.started += context => { shotInput = 0; };
+            //shotAction.performed += context => { shotInput = context.ReadValue<float>(); };
+            //shotAction.canceled += context => { shotInput = context.ReadValue<float>(); };
 
-            shotAction.Enable();
+            //shotAction.Enable();
 
             #endregion
 
             #region ThrowInput...
 
-            throwAction = new InputAction(name: "throw", binding: GlobalStringKeys.keySpace);
+            //throwAction = new InputAction(name: "throw", binding: GlobalStringKeys.keySpace);
 
-            throwAction.started += context => { throwInput = 0; };
-            throwAction.performed += context => { throwInput = context.ReadValue<float>(); };
-            throwAction.canceled += context => { throwInput = context.ReadValue<float>(); };
+            //throwAction.started += context => { throwInput = 0; };
+            //throwAction.performed += context => { throwInput = context.ReadValue<float>(); };
+            //throwAction.canceled += context => { throwInput = context.ReadValue<float>(); };
 
-            throwAction.Enable();
+            //throwAction.Enable();
 
             #endregion
         }
